@@ -1,6 +1,6 @@
 body{
   background-color: black;
-  margin: 10px 0 0 0;
+  margin: 1px 0 0 0;
 }
 *{
   box-sizing: border-box;
@@ -15,16 +15,26 @@ body{
 }
 nav{
   grid-area:"nav";
-  margin-right: 10px;
-  display: flex;
+  /* margin-right: 10px; */
+  /* display: flex; */
+  height: fit-content;
+  width: 100%;
+  float: left;
   flex-direction: column;
+  position:sticky;
+  top: 10px;
 }
 nav input[type="button"]{
-  margin-left: 20px;
+  margin-left: 16px;
 }
 nav li{
   margin-top: 10px;
   height: 40px;
+  width: 50px;
+  border-radius: 50%;
+}
+.navb:hover{
+  background-color: #131527;
 }
 a{
   text-decoration: none;
@@ -41,24 +51,38 @@ a{
   align-items: center;
   font-weight: 600;
   font-size: 18px;
+  border-radius: 50%;
+  padding: 5px;
 
 }
 main{
   grid-area: "main";
-  border-right: 1px solid whitesmoke;
-  border-left: 1px solid whitesmoke;
+  border-right: 1px solid rgb(68, 67, 67);
+  border-left: 1px solid rgb(68, 67, 67);
 }
 aside{
   grid-area: "trends";
   margin-left: 20px;
+  position: sticky;
+  /* width: 80%; */
+}
+.sidel{
+  float: right;
+  position: sticky;
+  /* top: 60px; */
+  overflow-y: auto;
+  width: 100%;
 }
 .sidel ul{
   padding-left: 25px;
 }
+.sidel ul a{
+  width: fit-content;
+}
 .sidel li:hover{
-  background-color: #000000;
-  width: 100%;
-  border-radius: 50%;
+  background-color: #59595c;
+  width: fit-content;
+  border-radius: 7px;
 }
 li{
   list-style-type: none;
@@ -69,17 +93,24 @@ input[type="button"]{
   border: none;
   border-radius: 50px;
   color: white;
-  font-size: 5 rem;
+  /* font-size: 5 ; */
   background-color: rgb(29, 155, 240);
 }
 .pro{
   margin-top: 10px;
-  /* display: flex; */
+  width: 100%;
   justify-content: space-around;
 }
 .pro:hover{
   background-color: #131527;
-  border-radius: 50px;
+  border-radius: 100px;
+}
+.fside{
+  float:right;
+  display: flex;
+  width: 90%;
+  margin-right: 20px;
+  flex-direction: column;
 }
 input[type="search"]{
   border: 1px solid #131527;
@@ -87,15 +118,16 @@ input[type="search"]{
   color: white;
   border-radius: 50px;
   background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 10px;
   width: 100%;
   height: 40px;
-  margin-top: 5px;
+  margin-top: 10px;
   padding: 10px 10px 10px 30px;
-  /* background-image: url(/twitter_images/sarch.png); */
+  background-image: url(/twitter_images/Search.svg);
 }
 ::placeholder{
   color: grey;
-  
 }
 /* #pinput::placeholder{
   font-size: 30px;
@@ -105,7 +137,7 @@ input[type="search"]{
   margin-top: 25px;
 }
 h3{
-  margin-top: 17px;
+  /* margin-top: ; */
   padding-left: 8px;
   font-size: 26px;
   margin-bottom: 10px;
@@ -113,12 +145,15 @@ h3{
 }
 main h3{
   margin-left: 10px;
+  margin-top: 0;
   font-size: 20px;
 }
 p{
   margin: 0;
 }
 h4{
+  padding-top: 10px;
+  padding-bottom: 3px;
   margin: 0;
   font-size: 22px;
   color: white;
@@ -132,15 +167,27 @@ h6{
   margin-top: 8px;
   font-size: 16px;
   margin-bottom: 8px;
+  color: white;
+}
+.onthis{
+  font-weight: 700;
+  font-size: smaller;
+  padding-bottom: 8px;
+  color: #f7f7f7;
 }
 .getv{
   border: 1px solid #131527;
   background-color: rgb(18, 18, 32);
   color: white;
   border-radius: 7px;
-
   margin-top: 10px;
   padding: 10px;
+}
+.getv input{
+  width: 35%;
+  padding: 0 15px 0 15px;
+  font-weight: 700;
+  font-size: 15px;
 }
 .trends{
   border: 1px solid #131527;
@@ -148,12 +195,16 @@ h6{
   color: white;
   border-radius: 7px;
   margin-top: 10px;
-  padding: 10px;
+  height: fit-content;
+  padding-bottom: 10px;
+}
+.trends h4{
+  margin-left: 10px;
 }
 .trend-content{
   /* box-sizing: border-box; */
   width: 100%;
-  padding: 10px;
+  /* padding-bottom:10px; */
   border-radius: 6px;
 }
 .trend-opt{
@@ -167,15 +218,19 @@ h6{
   margin: 0;
   padding: 0;
   width: 100%;
-  padding: 8px;
+  /* padding: 8px; */
   /* padding-left: 10px; */
 }
-.trends ul:hover{
+.trends li:hover{
   width: 100%;
   background-color: #131527;
 }
 .trends li{
   height: 70px;
+  column-gap: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 5px;
 }
 .trends a{
   display: flex;
@@ -194,18 +249,29 @@ sup{
   color: white;
   border-radius: 7px;
   margin-top: 10px;
-  padding: 10px;
+  /* padding: 10px; */
+}
+.follow h4{
+  margin-left: 10px;
+}
+.bot{
+  font-weight: 000;
+  font-size: 16px;
 }
 .top-nav{
   display: flex;
   height: 40px;
   justify-content: space-around;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid rgb(68, 67, 67);
   margin-top: 20px;
 }
 .top-nav a{
   display: flex;
   flex-direction: column;
+  border: #131527 1px solid;
+}
+.top-nav a:hover{
+  background-color: #131527;
 }
 #dar{
   color: #9b9ba3;
@@ -221,6 +287,12 @@ sup{
   width: 20%;
   margin-bottom: 0;
 }
+.top-nav-s{
+  position: sticky;
+  top: 0;
+  padding-top: 5px;
+  background-color: #404044
+}
 .top-nav a{
   display: flex;
   align-items: center;
@@ -234,19 +306,13 @@ sup{
   margin-left: 10px;
   width: 330px;
 }
-.sidel{
-  float: right;
-  margin-right: 40px;
-  margin-top: 10px;
-  /* width: 300px; */
-}
 .pp{
   border-radius: 50%;
   width: 40px;
   margin: 7px;
 }
 .post{
-  border-bottom: white 1px solid;
+  border-bottom: rgb(68, 67, 67) 1px solid;
   color: rgb(109, 109, 109);
 }
 #post{
@@ -256,11 +322,11 @@ sup{
   font-weight: 700;
 }
 .post-btn{
-  width:100%;
+  float: right;
   height: 50px;
 }
 .post-btn a{
-  width: 90%;
+  /* width: 90%; */
   display: block;
   height: 50%;
 }
@@ -274,23 +340,47 @@ sup{
   background-color: none;
 }
 .log-out{
-  padding: 10px;
+  /* padding: 10px; */
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   /* gap: 20px; */
+}
+.log-out1{
+  /* padding: 10px; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 20px; */
+}
+.log-out1 h6{
+  margin: 0;
+}
+.log-out a{
+  margin-left: 50px;
 }
 .log-out:hover{
   background-color: #131527;
-  /* border-radius: 50%; */
+  border-radius: 50%;
 }
 .post-input{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+.post-input2{
+  padding-right: 3%;
+  padding-bottom: 8px;
+  font-weight: 900 ;
 }
 .post-input input{
-  width: 85px;
-  margin-left: 100px;
+  width: 65px;
+  font-weight: 700;
+  font-size: 16.5px;
+  height: 35px;
+  padding: 0;
+  padding-bottom: 3px;
 }
 .post-input input ::placeholder{
   color: #59595c !important;
@@ -302,22 +392,26 @@ sup{
 }
 #post-input{
   width: 90%;
-  height: 40px;
+  height: 45px;
+  margin-bottom: 30px;
+  padding-top: 25px;
   border: none;
   background-color: black;
   color: whitesmoke;
 }
 #post-input::placeholder{
-  font-size: larger;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
 }
 .post-input ul{
   display: flex;
   padding:0;
-  width: 50%;
+  width: 45%;
   align-items: flex-start;
-  justify-content: space-evenly;
-  margin-left: 25px;
+  justify-content: space-between;
+  margin: 0;
+  padding-left: 10%;
+  gap: 10px;
 }
 .is{
   width: 20px;
@@ -334,7 +428,10 @@ sup{
   gap: 4px;
 }
 .post-head1 h6{
+  margin: 0;
   color: white;
+  height: 30px;
+  margin-top: 8px;
 }
 .post-head1 sub{
   margin-top: 8px;
@@ -347,8 +444,75 @@ sup{
 }
 .reaction{
   display: flex;
+  /* margin-left: 60px; */
+  border-bottom: #59595c solid 1px;
 }
 .reaction ul{
   display: flex;
+  padding: 0;
+  padding-left: 10%;
+  /* justify-content: space-around; */
+}
+.verified{
+  width: 15px;
+  /* margin-top: 8px; */
+}
+.follow-sug{
+  display: flex;
+  padding: 3px;
   justify-content: space-around;
+}
+.follow-sug:hover{
+  background-color: #59595c;
+
+}
+.follow-sug input{
+  background-color: whitesmoke;
+  color: black;
+  font-weight: 600;
+  width: 30%;
+  height: 35px;
+  margin-top: 10px;
+}
+.uname{
+  height: fit-content;
+}
+.uname h6{
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+.unamem{
+  display: flex;
+  gap: 8px;
+}
+.fillcon{
+  width: 100%;
+  color: #4154ff;
+  height: 40px;
+  padding-left: 25px;
+
+}
+.follow-sugb{
+  display: flex;
+  padding: 3px;
+  justify-content: space-around;
+}
+.follow-sugb:hover{
+  background-color: #59595c;
+  border-radius: 0px 0px 7px 7px;
+}
+.post-content{
+  width: 85%;
+  height: 500px;
+  margin-left:60px;
+  border: #59595c 2px solid;
+  border-radius: 15px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.img-2w{
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  border-radius: 14px;
 }
