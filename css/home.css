@@ -114,7 +114,7 @@ input[type="button"]{
 }
 input[type="search"]{
   border: 1px solid #131527;
-  background-color: rgb(18, 18, 32);
+  background-color: rgb(22, 24, 28);
   color: white;
   border-radius: 50px;
   background-repeat: no-repeat;
@@ -135,6 +135,10 @@ input[type="search"]{
 .logo{
   margin-left: 19px;
   margin-top: 25px;
+}
+.logo img:hover{
+  background-color: rgb(128, 128, 136);
+  border-radius: 50%;
 }
 h3{
   /* margin-top: ; */
@@ -172,12 +176,13 @@ h6{
 .onthis{
   font-weight: 700;
   font-size: smaller;
-  padding-bottom: 8px;
+  padding-top: 7px;
+  /* padding-bottom: 12px; */
   color: #f7f7f7;
 }
 .getv{
   border: 1px solid #131527;
-  background-color: rgb(18, 18, 32);
+  background-color: rgb(22, 24, 28);
   color: white;
   border-radius: 7px;
   margin-top: 10px;
@@ -191,7 +196,7 @@ h6{
 }
 .trends{
   border: 1px solid #131527;
-  background-color: rgb(18, 18, 32);
+  background-color: rgb(22, 24, 28);
   color: white;
   border-radius: 7px;
   margin-top: 10px;
@@ -223,7 +228,7 @@ h6{
 }
 .trends li:hover{
   width: 100%;
-  background-color: #131527;
+  background-color: rgba(41, 44, 49, 0.932);
 }
 .trends li{
   height: 70px;
@@ -245,7 +250,7 @@ sup{
 }
 .follow{
   border: 1px solid #131527;
-  background-color: rgb(18, 18, 32);
+  background-color: rgb(22, 24, 28);
   color: white;
   border-radius: 7px;
   margin-top: 10px;
@@ -260,18 +265,18 @@ sup{
 }
 .top-nav{
   display: flex;
-  height: 40px;
+  height: 50px;
   justify-content: space-around;
   border-bottom: 1px solid rgb(68, 67, 67);
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .top-nav a{
   display: flex;
   flex-direction: column;
-  border: #131527 1px solid;
+  border-bottom: #131527 1px solid;
 }
 .top-nav a:hover{
-  background-color: #131527;
+  background-color: rgba(41, 44, 49, 0.932);
 }
 #dar{
   color: #9b9ba3;
@@ -291,7 +296,7 @@ sup{
   position: sticky;
   top: 0;
   padding-top: 5px;
-  background-color: #404044
+  background-color: #000000f1
 }
 .top-nav a{
   display: flex;
